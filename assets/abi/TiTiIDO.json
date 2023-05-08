@@ -3,16 +3,6 @@
     {
       "inputs": [
         {
-          "internalType": "contract IERC20[]",
-          "name": "_baseTokens",
-          "type": "address[]"
-        },
-        {
-          "internalType": "uint256[]",
-          "name": "_precisionConvs",
-          "type": "uint256[]"
-        },
-        {
           "internalType": "uint256",
           "name": "_idoStartTime",
           "type": "uint256"
@@ -410,6 +400,39 @@
     {
       "inputs": [
         {
+          "internalType": "contract IERC20[]",
+          "name": "_tokens",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_precisions",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_idoStartTime",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_idoDuration",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_claimDuration",
+          "type": "uint256"
+        }
+      ],
+      "name": "setTestnetParams",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
           "internalType": "contract IERC20",
           "name": "_baseToken",
           "type": "address"
@@ -482,6 +505,53 @@
       "name": "unpause",
       "outputs": [],
       "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_startIndex",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "length",
+          "type": "uint256"
+        }
+      ],
+      "name": "getUserList",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "userAddrs",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "confirmedAmounts",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "claimableTiTis",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getUserListLength",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
       "type": "function"
     }
   ]
